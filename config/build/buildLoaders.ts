@@ -6,15 +6,15 @@ import { BuildOptions } from './types/config';
 export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     const svgLoader = {
         test: /\.svg$/,
-        use: ['@svgr/webpack']
+        use: ['@svgr/webpack'],
     };
 
     const fileLoader = {
         test: /\.(png|jpe?g|gif|woff2|woff)$/i,
         use: [
             {
-                loader: 'file-loader'
-            }
+                loader: 'file-loader',
+            },
         ],
     };
 
@@ -30,32 +30,32 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
                         localIdentName: options.isDev
                             ? '[path][name]__[local]--[hash:base64:8]'
                             : '[hash:base64:8]',
-                    }
+                    },
                 },
 
             },
             'sass-loader',
-        ]
+        ],
     };
 
     const babelLoader = {
         test: /\.(js|ts|tsx)$/,
         exclude: /node_modules/,
         use: {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
                 presets: ['@babel/preset-env'],
                 plugins: [
                     [
-                        "i18next-extract",
+                        'i18next-extract',
                         {
-                            locales: ["ru", "en"],
+                            locales: ['ru', 'en'],
                             keyAsDefaultValue: true,
-                        }
+                        },
                     ],
-                ]
-            }
-        }
+                ],
+            },
+        },
 
     };
 

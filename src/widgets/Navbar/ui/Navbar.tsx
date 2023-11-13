@@ -10,13 +10,13 @@ interface NavbarProps {
 
 export const Navbar: FC<NavbarProps> = (props) => {
     const { className } = props;
-    const t = useTranslation;
+    const {t} = useTranslation('translation');
 
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
             <div className={cls.links}>
-                <AppLink to={"/"} className={cls.navLink} theme={AppLinkTheme.SECONDARY}>{t('Main Page')}</AppLink>
-                <AppLink to={"/about"} className={cls.navLink} theme={AppLinkTheme.SECONDARY}>{t('About Page')}</AppLink>
+                <AppLink to="/" className={cls.navLink} theme={AppLinkTheme.SECONDARY}>{t('Main Page')}</AppLink>
+                <AppLink to="/about" className={cls.navLink} theme={AppLinkTheme.SECONDARY}>{t('About Page')}</AppLink>
             </div>
         </div>
     );

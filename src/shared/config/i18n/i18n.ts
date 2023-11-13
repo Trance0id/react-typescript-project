@@ -9,7 +9,7 @@ i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        lng: "ru",
+        lng: 'ru',
         fallbackLng: false,
         debug: __IS_DEV__,
 
@@ -17,6 +17,5 @@ i18n
     //   escapeValue: false,
     // }
     });
-
 
 export default i18n;

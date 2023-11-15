@@ -4,7 +4,7 @@ export default function AboutPage() {
     const { t } = useTranslation('about');
     return (
         <div>
-            {t('О странице')}
+            {t('О сайте')}
         </div>
     );
 }

@@ -4,7 +4,7 @@ export default function MainPage() {
     const { t } = useTranslation('main');
     return (
         <div>
-            {t('Главная Страница')}
+            {t('Главная страница')}
         </div>
     );
 }

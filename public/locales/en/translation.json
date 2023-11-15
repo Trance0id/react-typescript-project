@@ -1,7 +1,13 @@
 {
   "Тестовый пример": "Test example",
   "Перевод": "Translate",
+  "Переключить": "Toggle",
   "Главная страница": "Main page",
+  "О сайте": "About us",
   "Язык": "English",
-  "новый перевод": "новый перевод"
+  "новый перевод": "New translation",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Uncaught error",
+  "Обновить страницу": "Refresh page",
+  "throw error": "throw error"
 }

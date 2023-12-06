@@ -6,7 +6,7 @@ import { BuildOptions } from './types/config';
 
 export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
     return [
-        isDev && new ReactRefreshWebpackPlugin(),
+        isDev && new ReactRefreshWebpackPlugin({ overlay: false }),
         new HTMLWebpackPlugin({
             template: paths.html,
         }),

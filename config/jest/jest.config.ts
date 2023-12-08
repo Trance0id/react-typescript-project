@@ -19,8 +19,13 @@ const config = {
 
     // An array of directory names to be searched recursively up from the requiring module's location
     moduleDirectories: [
+        "src",
         "node_modules"
     ],
+
+    // modulePaths: [
+    //     '<RootDir>src',
+    // ],
 
     // An array of file extensions your modules use
     moduleFileExtensions: [

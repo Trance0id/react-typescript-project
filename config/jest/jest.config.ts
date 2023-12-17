@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from "path";
+
 // import type { Config } from 'jest';
 
 const config = {
@@ -23,9 +25,9 @@ const config = {
         "node_modules"
     ],
 
-    // modulePaths: [
-    //     '<RootDir>src',
-    // ],
+    modulePaths: [
+        '<RootDir>src',
+    ],
 
     // An array of file extensions your modules use
     moduleFileExtensions: [
@@ -41,6 +43,13 @@ const config = {
 
     // The root directory that Jest should scan for tests and modules within
     rootDir: '../../',
+
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    },
 
     // The glob patterns Jest uses to detect test files
     testMatch: [
